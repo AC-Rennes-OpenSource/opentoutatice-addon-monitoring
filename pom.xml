@@ -11,7 +11,7 @@
 	<version>2.2-SNAPSHOT</version>
 
 	<properties>
-		<nuxeo.version>6.0-HF09</nuxeo.version>
+		<nuxeo.version>RAB-6.1.5</nuxeo.version>
 	</properties>
 
 	<modules>
@@ -45,20 +45,23 @@
 		</pluginManagement>
 	</build>
 
-	<scm>
-		<developerConnection>scm:svn:http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-monitoring/trunk</developerConnection>
+       <scm>
+                <url>https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring</url>
+                <connection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git</connection>
+                <developerConnection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git</developerConnection>
+                <tag>HEAD</tag>
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>toutatice-releases</id>
-			<url>http://projet.toutatice.fr/nexus/content/repositories/toutatice-releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>toutatice-snapshots</id>
-			<url>http://projet.toutatice.fr/nexus/content/repositories/toutatice-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+        <distributionManagement>
+                <repository>
+                        <id>${releaseRepoId}</id>
+                        <url>${releaseRepoUrl}</url>
+                </repository>
+                <snapshotRepository>
+                        <id>${snapshotRepoId}</id>
+                        <url>${snapshotRepoUrl}</url>
+                </snapshotRepository>
+        </distributionManagement>
 
 </project>
 
