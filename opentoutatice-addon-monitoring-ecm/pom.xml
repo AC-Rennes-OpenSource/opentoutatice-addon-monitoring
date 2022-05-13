@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>opentoutatice-ecm.monitoring</groupId>
 		<artifactId>opentoutatice-monitoring-parent</artifactId>
-		<version>RAB-2.2</version>
+		<version>RAB-2.3</version>
 	</parent>
 
 	<artifactId>opentoutatice-monitoring-ecm</artifactId>
