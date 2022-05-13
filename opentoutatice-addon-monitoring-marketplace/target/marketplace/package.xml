@@ -1,0 +1,27 @@
+<!-- See documentation at http://doc.nuxeo.com/x/HgIz -->
+<package type="addon" name="open-toutatice-addons-monitoring" version="2.2-SNAPSHOT">
+	<title>Addon to install Java Melody monitoring over open toutatice</title>
+	<description>
+		<p>Evolution
+			* Nuxeo 6.0 compliant
+		</p>
+	</description>
+	<home-page>http://www.toutatice.fr</home-page>
+	<vendor>Academie de Rennes</vendor>
+	<installer restart="true" />
+	<uninstaller restart="true" />
+	<!-- <hotreload-support>false</hotreload-support> -->
+	<!-- <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance> -->
+	<nuxeo-validation>none</nuxeo-validation>
+	<production-state>production_ready</production-state>
+	<supported>false</supported>
+	<platforms>
+		<platform>cap-6.0</platform>
+	</platforms>
+	<dependencies>
+		<!-- Dependance sur la plate-forme opentoutatice -->
+		<package>open-toutatice:3.0.0</package>
+	</dependencies>
+	<license>LGPL 2.1</license>
+	<license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+</package>
