@@ -16,7 +16,7 @@
 
 	<modules>
 	   <module>opentoutatice-addon-monitoring-ecm</module>
-	   <module>opentoutatice-addon-monitoring-marketplace</module> 
+	   <!--module>opentoutatice-addon-monitoring-marketplace</module--> 
 	</modules>
 
 	<build>
