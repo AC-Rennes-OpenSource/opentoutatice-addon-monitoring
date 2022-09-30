@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>opentoutatice-ecm.monitoring</groupId>
-	<artifactId>opentoutatice-monitoring-parent</artifactId>
-	<packaging>pom</packaging>
-	<name>opentoutatice-monitoring-parent</name>
-	<description>Addon to upgrade the sanitizer service</description>
-	<version>RAB-2.4-RC01-SNAPSHOT</version>
+    <groupId>opentoutatice-ecm.monitoring</groupId>
+    <artifactId>opentoutatice-monitoring-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>opentoutatice-monitoring-parent</name>
+    <description>Addon to upgrade the sanitizer service</description>
+    <version>RAB-2.3</version>
 
-	<properties>
-		<nuxeo.version>RAB-6.1.5</nuxeo.version>
-	</properties>
+    <properties>
+        <nuxeo.version>RAB-6.1.5</nuxeo.version>
+    </properties>
 
-	<modules>
-	   <module>opentoutatice-addon-monitoring-ecm</module>
-	   <!--module>opentoutatice-addon-monitoring-marketplace</module--> 
-	</modules>
+    <modules>
+        <module>opentoutatice-addon-monitoring-ecm</module>
+        <!--module>opentoutatice-addon-monitoring-marketplace</module-->
+    </modules>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.2.1</version>
-			 	<configuration>
-					<tagBase>http://projet.toutatice.fr/repos/toutatice-ecm/opentoutatice-addons/opentoutatice-monitoring/tags</tagBase>
-					<releaseProfiles>unpack,pack</releaseProfiles>
-					<preparationGoals>clean install</preparationGoals>
-					<goals>deploy</goals>
-			      	</configuration>
-			</plugin>
-		</plugins>			
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.nuxeo.build</groupId>
-					<artifactId>ant-assembly-maven-plugin</artifactId>
-					<version>2.0.1</version>
-					<extensions>true</extensions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.2.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
 
-       <scm>
-                <url>https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring</url>
-                <connection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git</connection>
-                <developerConnection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git</developerConnection>
-                <tag>HEAD</tag>
-	</scm>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.nuxeo.build</groupId>
+                    <artifactId>ant-assembly-maven-plugin</artifactId>
+                    <version>2.0.1</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
-        <distributionManagement>
-                <repository>
-                        <id>${releaseRepoId}</id>
-                        <url>${releaseRepoUrl}</url>
-                </repository>
-                <snapshotRepository>
-                        <id>${snapshotRepoId}</id>
-                        <url>${snapshotRepoUrl}</url>
-                </snapshotRepository>
-        </distributionManagement>
+    <scm>
+        <url>https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring</url>
+        <connection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git</connection>
+        <developerConnection>scm:git:https://github.com/AC-Rennes-OpenSource/opentoutatice-addon-monitoring.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>${releaseRepoId}</id>
+            <url>${releaseRepoUrl}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${snapshotRepoId}</id>
+            <url>${snapshotRepoUrl}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
 
